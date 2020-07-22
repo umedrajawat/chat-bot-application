@@ -1,0 +1,128 @@
+/*styling for header*/
+header{
+    background-color: rgb(19, 7, 57);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: aliceblue;
+}
+
+/*styling for span*/
+span{
+    color: red;
+    font-size: 20px;
+}
+
+/*styling for body*/
+.body{
+    background-color: rgb(252, 252, 252);
+    display: grid;
+
+}
+/*styling for h3*/
+h3{
+    color: honeydew;
+    text-align: center;
+    text-decoration: underline;
+}
+/*styling for online users*/
+.onlineUsers{
+    border:black solid ;
+    max-height: fit-content;
+    background-color:#4B4373;
+    
+}
+
+/*the div displying the chat data.*/
+.chatDivs{
+    max-height: 400px;
+   background-image: url("crop1.jpeg");/*using background img in the chat space*/
+    grid-row:1 / span 10;
+    overflow-y: scroll;/*use of scroll bar*/
+}
+
+/*styling for form*/
+.form{
+    height: 90%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+/*styling for send button*/
+.send{
+    height: 110%;
+    background-color: rgb(37, 134, 158);
+}
+/*styling for textbox*/
+.textBox{
+    height:100%;
+}
+
+/*The input for message and the send button is styled below*/
+.formDiv{
+    height: 100%;
+    
+ }
+
+.sent_messages{
+    background-color: rgb(159, 201, 173);
+    margin-left: auto;
+    max-width: 600px;
+    word-break: break-all;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.sent_messages p{
+    margin:0px;
+}
+
+.received_messages{
+    background-color: rgb(159, 201, 173);
+    margin-right: auto;
+    max-width: 600px;
+    word-break: break-all;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+.received_messages p{
+    margin: 0px;
+}
+.username-time{
+    margin-top: 0%;
+    color: rgb(8, 7, 7);
+    font-size: 12px;
+    padding-bottom: 0%;
+    font-weight: bold;
+}
+
+
+/*The container to disply the messages is made as a grid.*/
+.chat-form{
+    display: grid;
+    grid-template-rows: repeat(10,1fr);
+}
+
+
+/*When a user joins a chat or leaves a chat a message is displayed. This is styled here.*/
+.joiningStatus p{
+    text-align: center;
+    color: aliceblue;
+}
+
+/*Media queries to apply different styles for different resolutions.*/
+@media screen and (min-width: 768px){
+    /*stacking all divs one over other*/
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width:1024px){
+    /*for devices having px>=1024px*/
+    .container{
+        display: grid;
+        height:400px;
+        grid-template-columns: 1fr 5fr;
+        background-color:rgb(135, 143, 250);
+    }
+}

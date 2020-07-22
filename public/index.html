@@ -1,0 +1,48 @@
+<!--
+   1. as soon as page is loaded popUp function is called
+   2.container is main div that contains 2 divs i.e
+        1. list of online users
+        2. chatdivs and formdiv  where formdiv contains
+                                    1.textbox area to type text
+                                    2.send button to send chat  
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>KickdrumGo</title><!--title of the page-->
+       <!--links  required for styling
+       -->
+       <link rel="stylesheet" href="reset.css">
+       <link rel="stylesheet" href="index.css">
+     </head>
+     <body onload="popUp()">
+         <header>
+            <h2>Kickdrum <span>&#9679;</span> Chat</h2>
+         </header>
+         <div class="container">
+            <div class="onlineUsers">
+               <div>
+                  <h3>Online</h3>
+               </div>
+                <ul>
+
+                </ul>
+            </div>
+            <div class="chat-form">
+               <div class="chatDivs">
+            
+               </div>
+               <div class="formDiv">
+                  <form class="form" action="">
+                       <input class="textBox" type="text">
+                       <input class="send"type="submit" value="Send" onclick="send(event)">
+                  </form>   
+               </div>
+            </div>
+         </div>  
+        
+    </body>
+    <!--links required for javascript-->
+       <script src = "/socket.io/socket.io.js"></script>
+       <script src="client.js"></script>
+</html>
